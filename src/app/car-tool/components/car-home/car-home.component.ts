@@ -1,5 +1,6 @@
 import { Component} from '@angular/core';
 import {Car} from '../../models/car';
+import {FormBuilder, FormGroup} from '@angular/forms';
 
 
 @Component({
@@ -8,8 +9,6 @@ import {Car} from '../../models/car';
   styleUrls: ['./car-home.component.css']
 })
 export class CarHomeComponent {
-
-  constructor() { }
 
   public headerText = 'Car Tool brought to you by Carl\'s Jr';
   public cars: Car[] = [
@@ -25,7 +24,32 @@ export class CarHomeComponent {
     carColorInput: '',
   };
 
+  public carReactiveForm: FormGroup;
+
+  constructor(private fb: FormBuilder) {
+    // properties below must match the formControlName in html.
+    this.carReactiveForm = this.fb.group({
+        carMakeInput: '',
+        carModelInput: '',
+        carYearInput: '',
+        carPriceInput: '',
+        carColorInput: '',
+      });
+  }
+
   public showTemplateForm() {
     console.log(this.carTemplateForm);
+  }
+
+  public showReactiveForm() {
+    this.cars = this.cars.concat([{
+      id: null,
+      make: this.carReactiveForm.controls.carMakeInput.value,
+      model: this.carReactiveForm.controls.carModelInput.value,
+      year: this.carReactiveForm.controls.carYearInput.value,
+      price: this.carReactiveForm.controls.carPriceInput.value,
+      color: this.carReactiveForm.controls.carColorInput.value
+    }]);
+    console.log(this.carReactiveForm.value);
   }
 }
