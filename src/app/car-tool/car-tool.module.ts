@@ -8,6 +8,6 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
     CommonModule, FormsModule, ReactiveFormsModule
   ],
   declarations: [CarHomeComponent],
-  exports: [CarHomeComponent]
+  exports: [CarHomeComponent],
 })
 export class CarToolModule { }

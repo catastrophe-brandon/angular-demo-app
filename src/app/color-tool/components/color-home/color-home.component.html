@@ -45,3 +45,45 @@
 
   <button type="button" (click)="showTemplateForm()">Save</button>
 </form>
+
+
+<header>
+  <h1>{{headerText}}</h1>
+</header>
+<table>
+
+  <thead>
+  <tr>
+    <th>Name</th>
+    <th>HexCode</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!--
+    ES2015 has iterables, forOf loop
+    Angular borrowed this concept
+    Asterisk indicates structural directive (add or remove DOM objects)
+    Short-hand for the ng-template directive.
+  -->
+  <tr *ngFor="let color of colors">
+    <td>{{color.name}}</td>
+    <td>{{color.hexCode}}</td>
+  </tr>
+
+  </tbody>
+</table>
+
+<!-- Example using reactive forms -->
+<!-- Brackets around the formGroup cause it to be expanded, called "computed properties" -->
+<form [formGroup]="colorReactiveForm">
+  <div>
+    <!-- ng-model (template forms), reactive forms can be used to connect form to a model -->
+
+    <label for="color-name2">Color Name:</label>
+    <input type="text" id="color-name2" name="colorNameInput" formControlName="colorNameInput">
+    <label for="color-hexcode2">Color Hexcode:</label>
+    <input type="text" id="color-hexcode2" name="colorHexCode" formControlName="colorHexCodeInput">
+
+2 </div>
+  <button type="button" (click)="showReactiveForm()">Save</button>
+</form>

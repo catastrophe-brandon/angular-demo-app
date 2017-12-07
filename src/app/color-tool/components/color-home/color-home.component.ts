@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {FormGroup, FormBuilder} from '@angular/forms';
 import { Color } from '../../models/color';
 
 // Decorators are typescript
@@ -27,8 +28,6 @@ import { Color } from '../../models/color';
 // OnInit is typescript, not part of JS.
 export class ColorHomeComponent {
 
-  constructor() { }
-
   // lifecycle function, hooks into Angular's lifecycle mechanism
   // ngOnInit() {
   // }
@@ -53,7 +52,27 @@ export class ColorHomeComponent {
     colorHexCodeInput: '',
   };
 
+  public colorReactiveForm: FormGroup;
+
+  //
+  // 'fb' is private because: it automagically makes fb part of the instance.
+  // This is called "dependency injection".
+  //
+  constructor(private fb: FormBuilder) {
+    // properties below must match the formControlName in html.
+    this.colorReactiveForm = this.fb.group({
+      colorNameInput: '',
+      colorHexCodeInput: ''});
+  }
+
   public showTemplateForm() {
     console.log(this.colorTemplateForm);
   }
+
+  public showReactiveForm() {
+    console.log(this.colorReactiveForm.value);
+  }
+
+  // dependency injection for reactive form usage
+
 }
