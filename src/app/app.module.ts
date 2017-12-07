@@ -16,7 +16,7 @@ import { CarToolModule } from './car-tool/car-tool.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, ColorToolModule, CarToolModule
+    BrowserModule, ColorToolModule, CarToolModule,
   ],
   providers: [],
   bootstrap: [AppComponent]

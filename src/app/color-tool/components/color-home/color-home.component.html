@@ -23,55 +23,28 @@
 
   </tbody>
 </table>
-<form>
-  <div>
-    <!-- ng-model (template forms), reactive forms can be used to connect form to a model -->
+<!--<form>-->
+  <!--<div>-->
+    <!--&lt;!&ndash; ng-model (template forms), reactive forms can be used to connect form to a model &ndash;&gt;-->
 
-    <label for="color-name">Color Name:</label>
-    <input type="text" id="color-name" name="colorNameInput"
-           [(ngModel)]="colorTemplateForm.colorNameInput">
-
-
-    <label for="color-hexcode">Color Hexcode:</label>
-    <input type="text" id="color-hexcode" name="colorHexCode"
-           [(ngModel)]="colorTemplateForm.colorHexCodeInput">
-
-  </div>
-
-  <!--
-    Parens indicate an output.
-    Square brackets indicate an input.
-  -->
-
-  <button type="button" (click)="showTemplateForm()">Save</button>
-</form>
+    <!--<label for="color-name">Color Name:</label>-->
+    <!--<input type="text" id="color-name" name="colorNameInput"-->
+           <!--[(ngModel)]="colorTemplateForm.colorNameInput">-->
 
 
-<header>
-  <h1>{{headerText}}</h1>
-</header>
-<table>
+    <!--<label for="color-hexcode">Color Hexcode:</label>-->
+    <!--<input type="text" id="color-hexcode" name="colorHexCode"-->
+           <!--[(ngModel)]="colorTemplateForm.colorHexCodeInput">-->
 
-  <thead>
-  <tr>
-    <th>Name</th>
-    <th>HexCode</th>
-  </tr>
-  </thead>
-  <tbody>
-  <!--
-    ES2015 has iterables, forOf loop
-    Angular borrowed this concept
-    Asterisk indicates structural directive (add or remove DOM objects)
-    Short-hand for the ng-template directive.
-  -->
-  <tr *ngFor="let color of colors">
-    <td>{{color.name}}</td>
-    <td>{{color.hexCode}}</td>
-  </tr>
+  <!--</div>-->
 
-  </tbody>
-</table>
+  <!--&lt;!&ndash;-->
+    <!--Parens indicate an output.-->
+    <!--Square brackets indicate an input.-->
+  <!--&ndash;&gt;-->
+
+  <!--<button type="button" (click)="showTemplateForm()">Save</button>-->
+<!--</form>-->
 
 <!-- Example using reactive forms -->
 <!-- Brackets around the formGroup cause it to be expanded, called "computed properties" -->
