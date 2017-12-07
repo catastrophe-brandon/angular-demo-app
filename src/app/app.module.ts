@@ -7,7 +7,7 @@ import { NgModule } from '@angular/core';
 // Makes the ColorToolModule available to this file, does not lexically import the source.
 import { ColorToolModule } from './color-tool/color-tool.module';
 import { AppComponent } from './app.component';
-import {CarToolModule} from './car-tool/car-tool.module';
+import { CarToolModule } from './car-tool/car-tool.module';
 
 
 // @NgModule is a typescript thing

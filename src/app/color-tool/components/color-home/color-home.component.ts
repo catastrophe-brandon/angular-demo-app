@@ -47,4 +47,13 @@ export class ColorHomeComponent {
     {id: 1, name: 'red', hexCode: '#FF0000'},
     {id: 2, name: 'blue', hexCode: '#0000FF'}
   ];
+
+  public colorTemplateForm = {
+    colorNameInput: '',
+    colorHexCodeInput: '',
+  };
+
+  public showTemplateForm() {
+    console.log(this.colorTemplateForm);
+  }
 }

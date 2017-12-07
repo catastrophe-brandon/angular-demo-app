@@ -23,3 +23,25 @@
 
   </tbody>
 </table>
+<form>
+  <div>
+    <!-- ng-model (template forms), reactive forms can be used to connect form to a model -->
+
+    <label for="color-name">Color Name:</label>
+    <input type="text" id="color-name" name="colorNameInput"
+           [(ngModel)]="colorTemplateForm.colorNameInput">
+
+
+    <label for="color-hexcode">Color Hexcode:</label>
+    <input type="text" id="color-hexcode" name="colorHexCode"
+           [(ngModel)]="colorTemplateForm.colorHexCodeInput">
+
+  </div>
+
+  <!--
+    Parens indicate an output.
+    Square brackets indicate an input.
+  -->
+
+  <button type="button" (click)="showTemplateForm()">Save</button>
+</form>

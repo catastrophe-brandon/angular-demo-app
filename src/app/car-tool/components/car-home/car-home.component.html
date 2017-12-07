@@ -8,6 +8,8 @@
     <th>Make</th>
     <th>Model</th>
     <th>Year</th>
+    <th>Color</th>
+    <th>Price</th>
   </tr>
   </thead>
   <tbody>
@@ -21,7 +23,44 @@
     <td>{{car.make}}</td>
     <td>{{car.model}}</td>
     <td>{{car.year}}</td>
+    <td>{{car.color}}</td>
+    <td>{{car.price}}</td>
   </tr>
 
   </tbody>
+
+  <div>
+    <!-- ng-model (template forms), reactive forms can be used to connect form to a model -->
+
+    <label for="car-make">Car Make:</label>
+    <input type="text" id="car-make" name="carMake"
+           [(ngModel)]="carTemplateForm.carMakeInput">
+
+    <label for="car-model">Car Model:</label>
+    <input type="text" id="car-model" name="carModel"
+           [(ngModel)]="carTemplateForm.carModelInput">
+
+    <label for="car-year">Car Year:</label>
+    <input type="number" id="car-year" name="carYear"
+           [(ngModel)]="carTemplateForm.carYearInput">
+
+    <label for="car-color">Car Color:</label>
+    <input type="text" id="car-color" name="carColor"
+           [(ngModel)]="carTemplateForm.carColorInput">
+
+
+
+    <!--<label for="color-hexcode">Color Name:</label>-->
+    <!--<input type="text" id="color-hexcode" name="colorHexCode"-->
+           <!--[(ngModel)]="colorTemplateForm.colorHexCodeInput">-->
+
+  </div>
+
+  <!--
+    Parens indicate an output.
+    Square brackets indicate an input.
+  -->
+
+  <button type="button" (click)="showTemplateForm()">Save</button>
+
 </table>
