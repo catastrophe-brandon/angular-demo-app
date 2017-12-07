@@ -1,0 +1,27 @@
+<header>
+  <h1>{{headerText}}</h1>
+</header>
+<table>
+
+  <thead>
+  <tr>
+    <th>Make</th>
+    <th>Model</th>
+    <th>Year</th>
+  </tr>
+  </thead>
+  <tbody>
+  <!--
+    ES2015 has iterables, forOf loop
+    Angular borrowed this concept
+    Asterisk indicates structural directive (add or remove DOM objects)
+    Short-hand for the ng-template directive.
+  -->
+  <tr *ngFor="let car of cars">
+    <td>{{car.make}}</td>
+    <td>{{car.model}}</td>
+    <td>{{car.year}}</td>
+  </tr>
+
+  </tbody>
+</table>
