@@ -6,6 +6,9 @@ import { ColorHomeComponent } from './color-home/color-home.component';
   imports: [
     CommonModule
   ],
-  declarations: [ColorHomeComponent]
+  declarations: [ColorHomeComponent],
+  // Needed to expose the component outside the module
+  exports: [ColorHomeComponent]
 })
 export class ColorToolModule { }
+
