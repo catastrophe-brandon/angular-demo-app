@@ -1,3 +1,18 @@
-<p>
-  data-table works!
-</p>
+<table>
+  <thead>
+  <tr *ngFor="let something of data">
+    <th *ngFor
+    <th>something.label</th>
+  </tr>
+  </thead>
+  <tbody>
+  <tr *ngFor="let row of data">
+    <td *ngFor="let column in row"></td>
+    <td>{{car.make}}</td>
+    <td>{{car.model}}</td>
+    <td>{{car.year}}</td>
+    <td>{{car.color}}</td>
+    <td>{{car.price}}</td>
+  </tr>
+  </tbody>
+</table>
