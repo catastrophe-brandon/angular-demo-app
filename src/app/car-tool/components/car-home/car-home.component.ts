@@ -1,6 +1,6 @@
-import { Component} from '@angular/core';
-import {Car} from '../../models/car';
-import {FormBuilder, FormGroup} from '@angular/forms';
+import { Component } from '@angular/core';
+import { Car } from '../../models/car';
+import { FormBuilder, FormGroup } from '@angular/forms';
 
 
 @Component({
@@ -10,7 +10,6 @@ import {FormBuilder, FormGroup} from '@angular/forms';
 })
 export class CarHomeComponent {
 
-  public headerText = 'Car Tool brought to you by Carl\'s Jr';
   public cars: Car[] = [
     {id: 1, make: 'Honda', model: 'Civic', year: 2001, price: 0.25, color: 'derple'},
     {id: 2, make: 'Ford', model: 'Pinto', year: 1981, price: 3.50, color: 'peuce'}
@@ -44,8 +43,8 @@ export class CarHomeComponent {
   public showReactiveForm() {
     this.cars = this.cars.concat([{
       id: null,
-      make: this.carReactiveForm.controls.carMakeInput.value,
-      model: this.carReactiveForm.controls.carModelInput.value,
+      make: this.carReactiveForm.value.carMakeInput,
+      model: this.carReactiveForm.value.carModelInput,
       year: this.carReactiveForm.controls.carYearInput.value,
       price: this.carReactiveForm.controls.carPriceInput.value,
       color: this.carReactiveForm.controls.carColorInput.value
