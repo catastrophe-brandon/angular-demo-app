@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import {FormGroup, FormBuilder} from '@angular/forms';
 import { Color } from '../../models/color';
+import {DataTableConfig} from '../../../shared-module/components/data-table/models/data-table-config';
+import {DataColumnConfig} from '../../../shared-module/components/data-table/models/data-column-config';
 
 // Decorators are typescript
 // selector - valid CSS selector that allows for finding part of the DOM in the HTML fragment.
@@ -41,7 +43,7 @@ export class ColorHomeComponent {
 
   // typescript, no access modifiers in JS.
   // JS does not allow data properties.
-  public headerText = 'Color Tool!';
+
   public colors: Color[] = [
     {id: 1, name: 'red', hexCode: '#FF0000'},
     {id: 2, name: 'blue', hexCode: '#0000FF'}
@@ -53,6 +55,12 @@ export class ColorHomeComponent {
   };
 
   public colorReactiveForm: FormGroup;
+  public colorTableConfig: DataTableConfig = {
+    cols: [
+      {header: 'Name', field: 'name'},
+      {header: 'HexCode', field: 'hexCode'}
+    ]
+  };
 
   //
   // 'fb' is private because: it automagically makes fb part of the instance.

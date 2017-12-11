@@ -1,6 +1,7 @@
 import { Component } from '@angular/core';
 import { Car } from '../../models/car';
 import { FormBuilder, FormGroup } from '@angular/forms';
+import {DataTableConfig} from '../../../shared-module/components/data-table/models/data-table-config';
 
 
 @Component({
@@ -9,6 +10,16 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   styleUrls: ['./car-home.component.css']
 })
 export class CarHomeComponent {
+
+  public carTableConfig: DataTableConfig = {
+    cols: [
+      {header: 'Make', field: 'make'},
+      {header: 'Model', field: 'model'},
+      {header: 'Year', field: 'year'},
+      {header: 'Price', field: 'price'},
+      {header: 'Color', field: 'color'}
+    ]
+  };
 
   public cars: Car[] = [
     {id: 1, make: 'Honda', model: 'Civic', year: 2001, price: 0.25, color: 'derple'},
