@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { ColorHomeComponent } from './components/color-home/color-home.component';
+import {SharedModuleModule} from '../shared-module/shared-module.module';
+import {ToolHeaderComponent} from '../shared-module/tool-header/tool-header.component';
 
 
 @NgModule({
   imports: [
-    CommonModule, ReactiveFormsModule, FormsModule
+    CommonModule, ReactiveFormsModule, FormsModule, SharedModuleModule
   ],
   declarations: [ColorHomeComponent],
   // Needed to expose the component outside the module

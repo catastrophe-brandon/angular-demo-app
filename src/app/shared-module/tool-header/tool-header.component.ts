@@ -8,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 export class ToolHeaderComponent implements OnInit {
 
   @Input()
-  public headerText = 'Default Car Tool Header Text';
+  public headerText = 'Default Header Text';
 
   constructor() { }
 

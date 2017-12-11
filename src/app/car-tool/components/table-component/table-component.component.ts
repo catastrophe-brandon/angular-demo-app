@@ -8,6 +8,7 @@ import {Car} from '../../models/car';
 })
 export class TableComponentComponent implements OnInit {
 
+  // Input will be completed using car data from car-home.component
   @Input()
   public cars: Car[] = [];
 
