@@ -20,7 +20,7 @@ import {DataTableConfig} from '../../../shared-module/components/data-table/mode
 //   - Ahead of time compilation will follow URLs at dev time.
 
 @Component({
-  selector: 'app-color-home',
+  selector: 'color-home',
   templateUrl: './color-home.component.html',
   styleUrls: ['./color-home.component.css']
 })
@@ -50,8 +50,8 @@ export class ColorHomeComponent {
 
   public colorTableConfig: DataTableConfig = {
     cols: [
-      {header: 'Name', field: 'name'},
-      {header: 'HexCode', field: 'hexCode'}
+      { header: 'Name', field: 'name'},
+      { header: 'HexCode', field: 'hexCode'}
     ]
   };
 
@@ -62,7 +62,5 @@ export class ColorHomeComponent {
       ...newColor,
     });
   }
-
-  // dependency injection for reactive form usage
 
 }

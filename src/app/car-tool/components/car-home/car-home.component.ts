@@ -1,17 +1,17 @@
 import { Component } from '@angular/core';
 import { Car } from '../../models/car';
 import { FormBuilder, FormGroup } from '@angular/forms';
-import {DataTableConfig} from '../../../shared-module/components/data-table/models/data-table-config';
-
+import { DataTableConfig } from '../../../shared-module/components/data-table/models/data-table-config';
+import { DataColumnConfig} from '../../../shared-module/components/data-table/models/data-column-config';
 
 @Component({
-  selector: 'app-car-home',
+  selector: 'car-home',
   templateUrl: './car-home.component.html',
   styleUrls: ['./car-home.component.css']
 })
 export class CarHomeComponent {
 
-  public carTableConfig: DataTableConfig = {
+  public carConfig: DataTableConfig = {
     cols: [
       {header: 'Make', field: 'make'},
       {header: 'Model', field: 'model'},

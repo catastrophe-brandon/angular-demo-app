@@ -8,6 +8,7 @@ import { NgModule } from '@angular/core';
 import { ColorToolModule } from './color-tool/color-tool.module';
 import { AppComponent } from './app.component';
 import { CarToolModule } from './car-tool/car-tool.module';
+import {SharedModuleModule} from './shared-module/shared-module.module';
 
 
 // @NgModule is a typescript thing

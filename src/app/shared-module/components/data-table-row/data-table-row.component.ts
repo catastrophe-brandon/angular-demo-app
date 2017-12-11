@@ -1,6 +1,5 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {DataTableConfig} from '../data-table/models/data-table-config';
-import {Data} from '@angular/router';
 
 @Component({
   // we will add the attribute 'view-row'
