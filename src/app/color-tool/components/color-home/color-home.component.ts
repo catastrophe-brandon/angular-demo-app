@@ -1,8 +1,6 @@
-import { Component } from '@angular/core';
-import {FormGroup, FormBuilder} from '@angular/forms';
-import { Color } from '../../models/color';
+import {Component} from '@angular/core';
+import {Color} from '../../models/color';
 import {DataTableConfig} from '../../../shared-module/components/data-table/models/data-table-config';
-import {DataColumnConfig} from '../../../shared-module/components/data-table/models/data-column-config';
 
 // Decorators are typescript
 // selector - valid CSS selector that allows for finding part of the DOM in the HTML fragment.
@@ -49,12 +47,7 @@ export class ColorHomeComponent {
     {id: 2, name: 'blue', hexCode: '#0000FF'}
   ];
 
-  public colorTemplateForm = {
-    colorNameInput: '',
-    colorHexCodeInput: '',
-  };
 
-  public colorReactiveForm: FormGroup;
   public colorTableConfig: DataTableConfig = {
     cols: [
       {header: 'Name', field: 'name'},
@@ -62,23 +55,11 @@ export class ColorHomeComponent {
     ]
   };
 
-  //
-  // 'fb' is private because: it automagically makes fb part of the instance.
-  // This is called "dependency injection".
-  //
-  constructor(private fb: FormBuilder) {
-    // properties below must match the formControlName in html.
-    this.colorReactiveForm = this.fb.group({
-      colorNameInput: '',
-      colorHexCodeInput: ''});
-  }
-
-  public showTemplateForm() {
-    console.log(this.colorTemplateForm);
-  }
-
-  public showReactiveForm() {
-    console.log(this.colorReactiveForm.value);
+  public addColor(newColor: Color) {
+    this.colors = this.colors.concat({
+      id: Math.max(...this.colors.map(c => c.id)) + 1,
+      ...newColor,
+    });
   }
 
   // dependency injection for reactive form usage

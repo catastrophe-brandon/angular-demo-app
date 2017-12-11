@@ -7,8 +7,8 @@
   </thead>
 
   <tbody>
-  <tr *ngFor="let item of data">
-    <td *ngFor="let col of config.cols">{{item[col.field]}}</td>
+  <tr data-view-row *ngFor="let item of data">
+    [config]="config" [data]="item"
   </tr>
 
   </tbody>

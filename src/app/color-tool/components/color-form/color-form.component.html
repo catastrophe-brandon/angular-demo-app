@@ -1,0 +1,13 @@
+<form [formGroup]="colorForm">
+    <div>
+    <!-- ng-model (template forms), reactive forms can be used to connect form to a model -->
+
+      <label for="color-name">Color Name:</label>
+      <input type="text" id="color-name" name="colorNameInput" formControlName="colorNameInput">
+
+      <label for="color-hexcode">Color Hexcode:</label>
+      <input type="text" id="color-hexcode" name="colorHexCode" formControlName="colorHexCodeInput">
+
+    </div>
+  <button type="button" (click)="submitColor()">{{buttonLabel}}</button>
+</form>
