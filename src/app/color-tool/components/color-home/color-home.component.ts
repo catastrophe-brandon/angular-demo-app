@@ -55,6 +55,7 @@ export class ColorHomeComponent {
     ]
   };
 
+  // invoked when an event is emitted by handleColorBlahblahblah
   public addColor(newColor: Color) {
     this.colors = this.colors.concat({
       id: Math.max(...this.colors.map(c => c.id)) + 1,

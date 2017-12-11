@@ -29,6 +29,7 @@ export class ColorFormComponent implements OnInit {
   submitColor = new EventEmitter<Color>();
 
   handleColorFormButtonClick() {
+    // emit an event and pass the new color object
     this.submitColor.emit({
       name: this.colorForm.value.colorNameInput,
       hexCode: this.colorForm.value.colorHexCodeInput
