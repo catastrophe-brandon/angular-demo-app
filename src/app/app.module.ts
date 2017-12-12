@@ -8,7 +8,7 @@ import { NgModule } from '@angular/core';
 import { ColorToolModule } from './color-tool/color-tool.module';
 import { AppComponent } from './app.component';
 import { CarToolModule } from './car-tool/car-tool.module';
-import {SharedModuleModule} from './shared-module/shared-module.module';
+import { DemoToolModule } from './demo-tool/demo-tool.module';
 
 
 // @NgModule is a typescript thing
@@ -17,7 +17,7 @@ import {SharedModuleModule} from './shared-module/shared-module.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, ColorToolModule, CarToolModule,
+    BrowserModule, ColorToolModule, CarToolModule, DemoToolModule
   ],
   providers: [],
   bootstrap: [AppComponent]
