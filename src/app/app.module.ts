@@ -9,6 +9,7 @@ import { ColorToolModule } from './color-tool/color-tool.module';
 import { AppComponent } from './app.component';
 import { CarToolModule } from './car-tool/car-tool.module';
 import { DemoToolModule } from './demo-tool/demo-tool.module';
+import {WishListModule} from './wish-list/wish-list.module';
 
 
 // @NgModule is a typescript thing
@@ -17,7 +18,7 @@ import { DemoToolModule } from './demo-tool/demo-tool.module';
     AppComponent
   ],
   imports: [
-    BrowserModule, ColorToolModule, CarToolModule, DemoToolModule
+    BrowserModule, ColorToolModule, CarToolModule, DemoToolModule, WishListModule
   ],
   providers: [],
   bootstrap: [AppComponent]

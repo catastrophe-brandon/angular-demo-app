@@ -1,5 +1,6 @@
 # DemoApp
 
+This repo contains code from a project build during an Angular training held in December of 2017.
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.0.
 
 ## Development server

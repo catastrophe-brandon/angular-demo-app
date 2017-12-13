@@ -78,3 +78,4 @@ ColorForm class
 `$event` is dependency injected at run-time based upon the event being emitted.
 Angular expression is the argument assigned to an output. (addColor($event) is NOT a function invocation)
 
+Further behavior with Input and Output is illustrated in code example with demo-parent and demo-child components.
